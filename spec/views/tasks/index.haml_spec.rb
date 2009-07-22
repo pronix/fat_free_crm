@@ -17,7 +17,7 @@ describe "/tasks/index.html.haml" do
       assigns[:view] = view
       assigns[:tasks] = { :due_asap => [ @asap ], :due_today => [ @today ] }
       
-      number_of_buckets = (view == "completed" ? Setting.task_completed : Setting.task_bucket).size
+      number_of_buckets = (view == "completed" ? Setting.task_completed[I18n.locale.to_s] : Setting.task_bucket[I18n.locale.to_s]).size
       template.should_receive(:render).with(hash_including(:partial => view)).exactly(number_of_buckets).times
       template.should_not_receive(:render).with(:partial => "empty")
 

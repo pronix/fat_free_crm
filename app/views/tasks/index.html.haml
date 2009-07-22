@@ -1,10 +1,11 @@
 = styles_for :task
 
 - if @view == "completed"
-  - buckets = Setting.task_completed
-  .title Completed Tasks
+  - buckets = Setting.task_completed[ILOCALE]
+  .title
+    =t :completed_tasks
 - else
-  - buckets = Setting.task_bucket
+  - buckets = Setting.task_bucket[ILOCALE]
   = render :partial => "title"
 
 %p.flash_message#tasks_flash{ hidden }

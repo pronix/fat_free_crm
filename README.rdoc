@@ -80,6 +80,18 @@ to http://localhost:3000
 
    $ ./script/server
 
+=== Set default locale
+
+Edit application_controller.rb method set_locale.
+For russian
+def set_locale
+  I18n.locale = 'ru'
+end
+
+=== How to translate
+
+Copy config/locales/en.yml to config/locales/your_language.yml and translate.
+When finished - set default locale for your crm.
 
 === For Developers
 

@@ -7,7 +7,7 @@ describe "/tasks/new.html.haml" do
     login_and_assign
     assigns[:task] = Factory.build(:task)
     assigns[:users] = [ @current_user ]
-    assigns[:bucket] = Setting.task_bucket[1..-1] << [ "On Specific Date...", :specific_time ]
+    assigns[:bucket] = Setting.task_bucket[ILOCALE][1..-1] << [ "On Specific Date...", :specific_time ]
     assigns[:category] = Setting.invert(:task_category)
   end
 

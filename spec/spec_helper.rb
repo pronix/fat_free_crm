@@ -108,6 +108,6 @@ end
 
 #----------------------------------------------------------------------------
 def stub_task_total(view = "pending")
-  settings = (view == "completed" ? Setting.task_completed : Setting.task_bucket)
+  settings = (view == "completed" ? Setting.task_completed[I18n.locale.to_s] : Setting.task_bucket[I18n.locale.to_s])
   settings.inject({ :all => 0 }) { |hash, (value, key)| hash[key] = 1; hash }
 end

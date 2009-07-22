@@ -17,9 +17,19 @@
 
 # Defaul applications settings to be loaded during installation:
 #
-#   rake db:settings:load
+#   rake crm:settings:load
 #
-:tabs: [
+tabs:
+  ru: [
+  { :active : true,  :text : "Рабочий стол",     :url : "/"              },
+  { :active : false, :text : "Задачи",         :url : "/tasks"         },
+  { :active : false, :text : "Акции",     :url : "/campaigns"     },
+  { :active : false, :text : "Лидеры ?",         :url : "/leads"         },
+  { :active : false, :text : "Аккаунты",      :url : "/accounts"      },
+  { :active : false, :text : "Контакты",      :url : "/contacts"      },
+  { :active : false, :text : "Возможности ?", :url : "/opportunities" }
+]
+  en: [
   { :active : true,  :text : "Dashboard",     :url : "/"              },
   { :active : false, :text : "Tasks",         :url : "/tasks"         },
   { :active : false, :text : "Campaigns",     :url : "/campaigns"     },
@@ -30,45 +40,88 @@
 ]
 
 campaign_status:
-  :planned       : Planned
-  :started       : Started
-  :completed     : Completed
-  :on_hold       : On Hold
-  :called_off    : Called Off
+  ru:
+    :planned       : Запланировано
+    :started       : Начато
+    :completed     : Закончено
+    :on_hold       : Приостановлено
+    :called_off    : Отозвано
+  en:
+    :planned       : Planned
+    :started       : Started
+    :completed     : Completed
+    :on_hold       : On Hold
+    :called_off    : Called Off
+
 
 campaign_status_color:
-  :planned       : palegreen
-  :started       : paleturquoise
-  :completed     : bisque
-  :on_hold       : pink
-  :called_off    : thistle
+  en:
+    :planned       : palegreen
+    :started       : paleturquoise
+    :completed     : bisque
+    :on_hold       : pink
+    :called_off    : thistle
+  ru:
+    :planned       : palegreen
+    :started       : paleturquoise
+    :completed     : bisque
+    :on_hold       : pink
+    :called_off    : thistle
+
 
 lead_status:
-  :new           : New
-  :contacted     : Contacted
-  :converted     : Converted
-  :rejected      : Rejected
+  en:
+    :new           : New
+    :contacted     : Contacted
+    :converted     : Converted
+    :rejected      : Rejected
+  ru:
+    :new           : Новый
+    :contacted     : Связанный
+    :converted     : Конвертированный
+    :rejected      : Отклоненный
+
 
 lead_status_color:
-  :new           : palegreen
-  :contacted     : paleturquoise
-  :converted     : bisque
-  :rejected      : thistle
+  en:
+    :new           : palegreen
+    :contacted     : paleturquoise
+    :converted     : bisque
+    :rejected      : thistle
+  ru:
+    :new           : palegreen
+    :contacted     : paleturquoise
+    :converted     : bisque
+    :rejected      : thistle
+
 
 lead_source:
-  :campaign      : Campaign
-  :cold_call     : Cold Call
-  :conference    : Conference
-  :online        : Online Marketing
-  :referral      : Referral
-  :self          : Self Generated
-  :web           : Web Site
-  :word_of_mouth : Word of Mouth
-  :other         : Other
+  en:
+    :campaign      : Campaign
+    :cold_call     : Cold Call
+    :conference    : Conference
+    :online        : Online Marketing
+    :referral      : Referral
+    :self          : Self Generated
+    :web           : Web Site
+    :word_of_mouth : Word of Mouth
+    :other         : Other
+  ru:
+    :campaign      : Кампания
+    :cold_call     : Холодный звонок
+    :conference    : Конференция
+    :online        : Online маркетинг
+    :referral      : Рекомендация
+    :self          : Самосгенерировано
+    :web           : Веб Сайт
+    :word_of_mouth : Устная договоренность
+    :other         : Другое
+
 
 # Use array of hashes for now to preserve sort order. For Ruby 1.9 or later
 # we can use regular hash since its insertion order will be preserved.
-opportunity_stage: [
+opportunity_stage:
+  en: [
   [ "Prospecting",  :prospecting  ],
   [ "Analysis",     :analysis     ],
   [ "Presentation", :presentation ],
@@ -78,39 +131,84 @@ opportunity_stage: [
   [ "Closed/Won",   :won          ],
   [ "Closed/Lost",  :lost         ]
 ]
+  ru: [
+  [ "Исследование",  :prospecting  ],
+  [ "Анализ",     :analysis     ],
+  [ "Презентация", :presentation ],
+  [ "Предложение",     :proposal     ],
+  [ "Переговоры",  :negotiation  ],
+  [ "Заключительный обзор", :final_review ],
+  [ "Закрыто/Выигрышно",   :won          ],
+  [ "Закрыто/Потеряно",  :lost         ]
+]
+
 
 opportunity_stage_color:
-  :prospecting   : lavender
-  :qualification : paleturquoise
-  :analysis      : mistyrose
-  :presentation  : wheat
-  :proposal      : thistle
-  :negotiation   : skyblue
-  :final_review  : aquamarine
-  :won           : lightgreen
-  :lost          : pink
+  en:
+    :prospecting   : lavender
+    :qualification : paleturquoise
+    :analysis      : mistyrose
+    :presentation  : wheat
+    :proposal      : thistle
+    :negotiation   : skyblue
+    :final_review  : aquamarine
+    :won           : lightgreen
+    :lost          : pink
+  ru:
+    :prospecting   : lavender
+    :qualification : paleturquoise
+    :analysis      : mistyrose
+    :presentation  : wheat
+    :proposal      : thistle
+    :negotiation   : skyblue
+    :final_review  : aquamarine
+    :won           : lightgreen
+    :lost          : pink
+
 
 task_category:
-  :call          : Call
-  :email         : Email
-  :folowup       : Follow-up
-  :lunch         : Lunch
-  :meeting       : Meeting
-  :money         : Money
-  :presentation  : Presentation
-  :trip          : Trip
+  en:
+    :call          : Call
+    :email         : Email
+    :folowup       : Follow-up
+    :lunch         : Lunch
+    :meeting       : Meeting
+    :money         : Money
+    :presentation  : Presentation
+    :trip          : Trip
+  ru:
+    :call          : Звонок
+    :email         : Эл.почта
+    :folowup       : Follow-up
+    :lunch         : Деловой обед
+    :meeting       : Собрание
+    :money         : Деньги
+    :presentation  : Презентация
+    :trip          : Поездка
 
 task_category_color:
-  :call          : lavender
-  :email         : paleturquoise
-  :folowup       : mistyrose
-  :lunch         : wheat
-  :meeting       : thistle
-  :money         : lightgreen
-  :presentation  : aquamarine
-  :trip          : skyblue
+  en:
+    :call          : lavender
+    :email         : paleturquoise
+    :folowup       : mistyrose
+    :lunch         : wheat
+    :meeting       : thistle
+    :money         : lightgreen
+    :presentation  : aquamarine
+    :trip          : skyblue
+  ru:
+    :call          : lavender
+    :email         : paleturquoise
+    :folowup       : mistyrose
+    :lunch         : wheat
+    :meeting       : thistle
+    :money         : lightgreen
+    :presentation  : aquamarine
+    :trip          : skyblue
 
-task_bucket: [
+
+task_bucket:
+  en: [
   [ "Overdue" ,            :overdue       ],
   [ "As Soon As Possible", :due_asap      ],
   [ "Today",               :due_today     ],
@@ -119,11 +217,29 @@ task_bucket: [
   [ "Next Week",           :due_next_week ],
   [ "Sometime Later",      :due_later     ]
 ]
+  ru: [
+  [ "Просроченные" ,            :overdue       ],
+  [ "При первой возможности", :due_asap      ],
+  [ "Сегодня",               :due_today     ],
+  [ "Завтра",            :due_tomorrow  ],
+  [ "На этой неделе",           :due_this_week ],
+  [ "На следующей неделе",           :due_next_week ],
+  [ "Когда-нибудь позже",      :due_later     ]
+]
 
-task_completed: [
+task_completed:
+  en: [
   [ "Today",      :completed_today      ],
   [ "Yesterday",  :completed_yesterday  ],
   [ "Last week",  :completed_last_week  ],
   [ "This month", :completed_this_month ],
   [ "Last month", :completed_last_month ]
 ]
+  ru: [
+  [ "Сегодня",      :completed_today      ],
+  [ "Вчера",  :completed_yesterday  ],
+  [ "Прошлая неделя",  :completed_last_week  ],
+  [ "Текущий месяц", :completed_this_month ],
+  [ "Прошлый месяц", :completed_last_month ]
+]
+

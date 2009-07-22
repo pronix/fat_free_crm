@@ -1,5 +1,6 @@
 #footer
-  == Powered by #{link_to "Fat Free CRM", "http://www.fatfreecrm.com", :popup => true }
+  =t 'about.powered_by'
+  = link_to("Fat Free CRM", "http://www.fatfreecrm.com", :popup => true)
   == &copy; 2008-#{Date.today.year} by Michael Dvorkin
   == | #{link_to  "About", "#about", :rel => "facebox" }
 %br
@@ -9,10 +10,9 @@
     %span.cool== v#{FatFreeCRM::Version}
     == (#{ActiveRecord::Base.connection.adapter_name.downcase})
   %p
-    Thank you for using Fat Free CRM! We appreciate your business and hope
-    you enjoy using the software.
+    =t 'about.thank_you'
     %p
-      Few resources that you might find helpful (links open in a new window):
+      =t 'about.few_resource'
       %ul{:style => "margin: 0px 0px 0px 15px"}
         %li== &raquo; #{link_to "Home page", "http://www.fatfreecrm.com", :popup => true}
         %li== &raquo; #{link_to "Project page", "http://github.com/michaeldv/fat_free_crm/tree/master", :popup => true}

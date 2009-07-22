@@ -1,18 +1,18 @@
 #header
   #welcome
     - if current_user
-      Welcome,
+      =t 'header.welcome'
       -# This span gets updated on the fly if user changes her name.
       %span#welcome_username= @current_user.name
       %span> !&nbsp;&nbsp;
 
-      = link_to("Quick find", "#", :id => "jumper") << " | "
-      = link_to("Profile", profile_path) << " | "
-      = link_to("Logout", logout_path, :method => :delete)
+      = link_to( "#{I18n.t 'header.quick_find'}" , "#", :id => "jumper") << " | "
+      = link_to( "#{I18n.t 'header.profile'}" , profile_path) << " | "
+      = link_to("#{I18n.t 'header.logout'}", logout_path, :method => :delete)
       = render :partial => "/layouts/jumpbox"
     - else
-      = link_to("Login", login_path) << " | "
-      = link_to("Sign Up", signup_path)
+      = link_to("#{I18n.t 'header.login'}", login_path) << " | "
+      = link_to("#{I18n.t 'header.sign_up'}", signup_path)
       -# link_to("Help", "/")
   %h3
     = link_to("Fat Free CRM", root_path)

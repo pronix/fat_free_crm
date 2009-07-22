@@ -1,0 +1,40 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+ru:
+  hello: "Приветствуйю"
+  help_text: "Вспомогательный текст (TBD)."
+  recent_items: "Recent Items"
+  completed_tasks: "Выполненные Задания"
+  you_dont_have_any: "У вас нет {{name}} заданий."
+  feel_free: "Feel free to "
+  create_new_task: "создать новое задание"
+  about:
+    thank_you: "Спасибо за использование Fat Free CRM! We appreciate your business and hope
+                you enjoy using the software."
+    powered_by: "Создано гением "
+    few_resource:    "Несколько источников которые могут оказаться полезными (ссылки откроются в новом окне):"
+  header:
+    welcome: "Здравствуйте"
+    quick_find: "Быстрый поиск"
+    profile: "Профиль"
+    logout: "Выйти"
+    login: "Вход"
+    sign_up: "Регистрация"
+  login:
+    dont_have_account: "У Вас нет аккаунта ?"
+    sign_up_now: "Зарегистрироваться сейчас!"
+    invalid: "Неверный логин или пароль. Проверьте раскладку и регистр."
+    uname: "Логин:"
+    pass: "Пароль:"
+    forgot_pass: "Забыли пароль?"
+    log_by_openid: "Войти используя OpenID"
+    log_by_userpass: "Войти используя логин и пароль"
+    remme: "Запомнить меня"
+
+
+
+
+
+
+

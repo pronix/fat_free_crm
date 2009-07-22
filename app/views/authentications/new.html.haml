@@ -1,18 +1,23 @@
 .standalone
   - form_for @authentication, :url => authentication_path do |f|
-    .title_tools== Don't have an account? #{link_to 'Sign Up Now!', signup_path}
-    .title Login
-    .warn= "Invalid username or password" unless f.error_messages.blank?
+    .title_tools
+      =t 'login.dont_have_account'
+      == #{link_to "#{I18n.t 'login.sign_up_now'}", signup_path}
+    .title
+      =t 'header.login'
+    .warn= I18n.t 'login.invalid'  unless f.error_messages.blank?
     .section
-      .label Username:
-      = f.text_field :username
-      .label Password:
-      = f.password_field :password
-    .label
-      .check_box
-        = f.check_box(:remember_me) << " Remember me"
-
+      .label
+        =t 'login.uname'
+        = f.text_field :username
+      .label
+        =t 'login.pass'
+        = f.password_field :password
+      .label
+        .check_box
+          = f.check_box(:remember_me) << "#{I18n.t 'login.remme'}"
     .buttonbar
-      = f.submit "Login"
+      = f.submit I18n.t 'header.login'
       or 
-      = link_to "Forgot password?", new_password_path
+      = link_to "#{ I18n.t 'login.forgot_pass'}", new_password_path
+

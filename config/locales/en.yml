@@ -3,3 +3,37 @@
 
 en:
   hello: "Hello world"
+  help_text: "Help text (TBD)."
+  recent_items: "Recent Items"
+  completed_tasks: "Completed Tasks"
+  you_dont_have_any: "You don't have any {{name}} tasks."
+  feel_free: "Feel free to "
+  create_new_task: "create a new task"
+  about:
+    thank_you: "Thank you for using Fat Free CRM! We appreciate your business and hope
+                you enjoy using the software."
+    powered_by: "Powered by "
+    few_resource:    "Few resources that you might find helpful (links open in a new window):"
+  header:
+    welcome: "Welcome"
+    quick_find: "Quick find"
+    profile: "Profile"
+    logout: "Logout"
+    login: "Login"
+    sign_up: "Sign Up"
+  login:
+    dont_have_account: "Don't have an account?"
+    sign_up_now: "Sign Up Now!"
+    invalid: "Invalid username or password"
+    uname: "Username:"
+    pass: "Password:"
+    forgot_pass: "Forgot password?"
+    log_by_openid: "Login using OpenID"
+    log_by_userpass: "Login using username and password"
+    remme: "Remember me"
+
+
+
+
+
+
