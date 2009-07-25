@@ -9,4 +9,8 @@ public/javascripts/cache/*.js
 public/stylesheets/cache/*.css
 .DS_Store
 *~
+<<<<<<< HEAD:.gitignore
 tags
+=======
+*.swp
+>>>>>>> b3487a6f9ed76144705211af4b1d21acd7c22a18:.gitignore

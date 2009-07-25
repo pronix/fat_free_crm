@@ -4,6 +4,20 @@ It does not matter how slowly you go as long as you do not stop.
 First they ignore you, then they laugh at you, then they fight you,
 then you win. –- Mahatma Gandhi
 
+Fri, Jul 24, 2009
+---------------------------------------------------------------------
+- Fixed a typo that affected individual permissions (thanks, Guillermo!)
+- Refactored password reset controller and related views.
+- Merged in Spanish translation from chillicoder/master (thanks, Martin!).
+- Release 0.9.5.
+
+Thu, Jul 23, 2009
+---------------------------------------------------------------------
+- Made UUID support optional (affects MySQL v5+ users only).
+- Removed task-specific flash area; changed to use generic flash messages instead.
+- Store current user in the class to make it easier to access it from observers.
+- Removed password length restriction to allow blank passwords.
+
 Tue, Jul 21, 2009
 ---------------------------------------------------------------------
 - Upgraded HAML/SASS to version 2.2.2 (Powerful Penny) and made it a plugin.
