@@ -26,3 +26,7 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+  # Now you can use 'ru' or 'en' locales
+  # if you want translate application - read docs
+I18n.default_locale = :en
+

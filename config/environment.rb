@@ -56,7 +56,3 @@ Rails::Initializer.run do |config|
   config.action_mailer.sendmail_settings = { :location  => "/usr/sbin/sendmail", :arguments => "-i -t" }
 end
 
-# Now you can use 'ru' or 'en' locales
-# if you want translate application - read docs
-ILOCALE = 'ru'
-
