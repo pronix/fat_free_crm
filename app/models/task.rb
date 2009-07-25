@@ -130,7 +130,7 @@ class Task < ActiveRecord::Base
   # Returns list of tasks grouping them by due date as required by tasks/index.
   #----------------------------------------------------------------------------
   def self.find_all_grouped(user, view)
-    settings = (view == "completed" ? Setting.task_completed[ILOCALE] : Setting.task_bucket[ILOCALE])
+    settings = (view == "completed" ? Setting.task_completed[I18n.locale.to_s] : Setting.task_bucket[I18n.locale.to_s])
     settings.inject({}) do |hash, (value, key)|
       hash[key] = (view == "assigned" ? assigned_by(user).send(key).pending : my(user).send(key).send(view))
       hash
@@ -151,7 +151,7 @@ class Task < ActiveRecord::Base
   # Returns task totals for each of the views as needed by tasks sidebar.
   #----------------------------------------------------------------------------
   def self.totals(user, view = "pending")
-    settings = (view == "completed" ? Setting.task_completed[ILOCALE] : Setting.task_bucket[ILOCALE])
+    settings = (view == "completed" ? Setting.task_completed[I18n.locale.to_s] : Setting.task_bucket[I18n.locale.to_s])
     settings.inject({ :all => 0 }) do |hash, (value, key)|
       hash[key] = (view == "assigned" ? assigned_by(user).send(key).pending.count : my(user).send(key).send(view).count)
       hash[:all] += hash[key]

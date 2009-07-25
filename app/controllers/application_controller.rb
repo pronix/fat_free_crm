@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   private
   # set default locale
   def set_locale
-    I18n.locale = ILOCALE
+    I18n.locale = I18n.locale.to_s
   end
   #----------------------------------------------------------------------------
   def set_current_tab(tab = controller_name.to_sym)

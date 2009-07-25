@@ -58,12 +58,12 @@ class Setting < ActiveRecord::Base
 
   #-------------------------------------------------------------------
   def self.as_hash(setting)
-    send(setting)[ILOCALE].inject({}) { |hash, item| hash[item.last] = item.first; hash }
+    send(setting)[I18n.locale.to_s].inject({}) { |hash, item| hash[item.last] = item.first; hash }
   end
 
   #-------------------------------------------------------------------
   def self.invert(setting)
-    send(setting)[ILOCALE].invert.sort
+    send(setting)[I18n.locale.to_s].invert.sort
   end
 
 end

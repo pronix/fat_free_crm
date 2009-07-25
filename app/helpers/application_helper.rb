@@ -19,7 +19,7 @@ module ApplicationHelper
 
   def tabs
     @current_tab ||= :home
-    Setting[:tabs][ILOCALE].each { |tab| tab[:active] = (tab[:text].downcase.to_sym == @current_tab) }
+    Setting[:tabs][I18n.locale.to_s].each { |tab| tab[:active] = (tab[:text].downcase.to_sym == @current_tab) }
   end
   
   #----------------------------------------------------------------------------
