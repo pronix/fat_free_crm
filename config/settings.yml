@@ -24,10 +24,10 @@ tabs:
   { :active : true,  :text : "Рабочий стол",     :url : "/"              },
   { :active : false, :text : "Задачи",         :url : "/tasks"         },
   { :active : false, :text : "Акции",     :url : "/campaigns"     },
-  { :active : false, :text : "Лидеры ?",         :url : "/leads"         },
+  { :active : false, :text : "Лидеры",         :url : "/leads"         },
   { :active : false, :text : "Аккаунты",      :url : "/accounts"      },
   { :active : false, :text : "Контакты",      :url : "/contacts"      },
-  { :active : false, :text : "Возможности ?", :url : "/opportunities" }
+  { :active : false, :text : "Возможности", :url : "/opportunities" }
 ]
   en: [
   { :active : true,  :text : "Dashboard",     :url : "/"              },

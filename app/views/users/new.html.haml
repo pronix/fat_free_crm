@@ -1,17 +1,24 @@
 .standalone
   - form_for @user do |f|
-    .title_tools== Already signed up? #{link_to "Login Now!", login_path}
-    .title Sign Up
+    .title_tools
+      =t 'new_user.already_signed'
+      =link_to "#{I18n.t 'new_user.login_now'}", login_path
+    .title 
+      =t 'new_user.sign_up'
     = f.error_messages
     .section
-      .label Email:
+      .label
+        =t 'new_user.email'
       = f.text_field :email
-      .label Username:
+      .label
+        =t 'login.uname'
       = f.text_field :username
-      .label Password:
+      .label
+        =t 'login.pass'
       = f.password_field :password
-      .label Password confirmation:
+      .label
+        =t 'new_user.pass_conf'
       = f.password_field :password_confirmation
 
     .buttonbar
-      = f.submit "Sign Up"
+      = f.submit "#{I18n.t 'new_user.sign_up'}"

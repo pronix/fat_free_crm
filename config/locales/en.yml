@@ -31,3 +31,10 @@ en:
     log_by_openid: "Login using OpenID"
     log_by_userpass: "Login using username and password"
     remme: "Remember me"
+  new_user:
+    already_signed: "Already signed up?"
+    login_now: "Login Now!"
+    sign_up: "Sign Up"
+    email: "Email"
+    pass_conf: "Password confirmation:"
+
